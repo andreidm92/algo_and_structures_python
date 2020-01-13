@@ -9,3 +9,24 @@
 Также сообщать пользователю о невозможности деления на ноль,
 если он ввел 0 в качестве делителя.
 """
+
+print ('Введите 0, если хотите выйти из программы')
+while True:
+    sign = input("Введите знак '+', '-', '*', '/': ")
+    if sign == '0': break
+    if sign in ('+', '-', '*', '/' ):
+        NUMB1 = float(input("Введите первое число: "))
+        NUMB2 = float(input("Введите второе число: "))
+        if sign == '+':
+            print ("%.2f" % (NUMB1 + NUMB2))
+        elif sign == '-':
+            print("%.2f" % (NUMB1 - NUMB2))
+        elif sign == '*':
+            print("%.2f" % (NUMB1 * NUMB2))
+        elif sign == '/':
+            if NUMB2 != 0:
+                print("%.2f" % (NUMB1 / NUMB2))
+            else: print("Деление на ноль ")
+    else:
+        print('Ввели неверный знак')
+
